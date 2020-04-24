@@ -29,3 +29,26 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+.header{
+  text-align: center;
+}
+
+.button{
+  margin-top: 1%;
+  text-align: center;
+}
+
+// formatting for cards
+.card{
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+// hover for cards 
+.card2:hover{  
+  size: 20%;
+  background-color: gray;
+}

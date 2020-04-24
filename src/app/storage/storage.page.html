@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>   
+    <ion-title class="header">Register</ion-title>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen] = "true">
+  <div class="button"> <!-- Div for buttons so I can center in css-->
+    <!-- Buttons for navigation -->
+    <ion-button class ="button" color="tertiary" fill="outline" [routerLink]="['/home']">Home</ion-button>
+    <ion-button color="tertiary" fill="outline" [routerLink]="['/tech-news']">Technology Headlines</ion-button>
+    <ion-button color="tertiary" fill="outline" [routerLink]="['/search-news']">Search Headlines</ion-button>
+    <ion-button color="tertiary" fill="outline" [routerLink]="['/storage']">Register</ion-button>
+  </div>
+
+  <!-- Div for box in css -->
+  <div class="registerBox">
+    <!-- Inputs for the register page and save button -->
+    <br>
+    <p>Register for email updates!</p>
+    <ion-input [(ngModel)]="firstname" placeholder="Enter your first name"></ion-input>
+    <br>
+    <ion-input [(ngModel)]="secondname" placeholder="Enter your second name"></ion-input>
+    <br>
+    <ion-input [(ngModel)]="email" placeholder="Enter your email"></ion-input>
+    <br>
+    <ion-button (click)="onSave()" [routerLink]="['/home']">Register</ion-button>
+  </div>
+
+</ion-content>

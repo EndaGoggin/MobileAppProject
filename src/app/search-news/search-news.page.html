@@ -1,11 +1,11 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <!-- Displays Welcome with your name after you register -->
-    <ion-title class="header">Home - Welcome {{firstname}}</ion-title> <!-- Couldn't figure out how to update name without refreshing-->
+    <ion-title class="title"></ion-title>
+    <ion-searchbar [(ngModel)]="searchTitle" (change)="performSearch()"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> 
+<ion-content>
   <div class="button"> <!-- Div for buttons so I can center in css-->
     <!-- Buttons for navigation -->
     <ion-button class ="button" color="tertiary" fill="outline" [routerLink]="['/home']">Home</ion-button>
@@ -13,17 +13,14 @@
     <ion-button color="tertiary" fill="outline" [routerLink]="['/search-news']">Search Headlines</ion-button>
     <ion-button color="tertiary" fill="outline" [routerLink]="['/storage']">Register</ion-button>
   </div>
-
-  <div class="card"> <!-- Div for css on articles-->
-    <ion-card class="card2" *ngFor = "let news of NewsData"> <!-- Loops through articles and displays-->
+  <div class="card">
+    <ion-card class="card2" *ngFor = "let news of News"> <!-- Loops through articles and displays-->
       <ion-card-header (click)="webPage(news.url)"> <!-- used InAppBrowser to open  link-->
-       <!-- items inside of card from api -->
-        <img src={{news.urlToImage}}>
+         <!-- items inside of card from api -->
+        <img src="{{news.urlToImage}}">
         <ion-card-title class="title">{{news.title}}</ion-card-title>
-        <ion-card-subtitle>{{news.description}}</ion-card-subtitle>   
+        <ion-card-subtitle> {{news.description}}</ion-card-subtitle>   
       </ion-card-header>
     </ion-card>
   </div>
-</ion-content> 
-
-
+</ion-content>

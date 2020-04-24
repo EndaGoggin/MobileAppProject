@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tech-news',
+    loadChildren: () => import('./tech-news/tech-news.module').then( m => m.TechNewsPageModule)
+  },
+  {
+    path: 'search-news',
+    loadChildren: () => import('./search-news/search-news.module').then( m => m.SearchNewsPageModule)
+  },
+  {
+    path: 'storage',
+    loadChildren: () => import('./storage/storage.module').then( m => m.StoragePageModule)
+  },
 ];
 
 @NgModule({
