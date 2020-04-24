@@ -22,7 +22,7 @@ export class StoragePage  {
     this.storage.set("email", this.email);
     
     // Alert saying that name is used on home screen
-    const allInfo = '${this.firstname} is saved!'; 
+    const allInfo = `${this.firstname} is now saved as your name on the Home page!`; 
     alert(allInfo); 
   }
 
